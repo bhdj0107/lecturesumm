@@ -92,3 +92,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Radix UI Dialog 관련 overflow 이슈 수정 */
+html:has(body > [data-state="open"]),
+body:has(> [data-state="open"]) {
+  width: 100%;
+  position: relative;
+  overflow: auto !important;
+}
